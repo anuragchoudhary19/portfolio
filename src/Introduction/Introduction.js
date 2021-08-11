@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../images/19199262.jpg';
 import styles from './Introduction.module.css';
 
 const Introduction = () => {
