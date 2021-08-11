@@ -1,0 +1,7 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  color: var(--color);
+  height: 100vh;
+  background-color: transparent;
+}
