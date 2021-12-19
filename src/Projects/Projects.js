@@ -8,33 +8,33 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './Projects.module.css';
 const Projects = () => {
   const projects = useRef();
-  useEffect(() => {
-    const options = { root: null, threshold: 0.25, rootMargin: '-50px' };
-    const observer = new IntersectionObserver(animateProjects, options);
-    function animateProjects(entries, observer) {
-      entries.forEach((entry) => {
-        let heading = document.getElementById('projects-heading');
-        if (entry.isIntersecting) {
-          heading.style.opacity = '1';
-          heading.style.visibility = 'visible';
-          heading.style.transform = 'translateY(0)';
-          heading.style.transitionDelay = '0ms';
-          document.getElementById('card1').style.transform = 'translateY(0)';
-          document.getElementById('card1').style.opacity = '1';
-          document.getElementById('card1').style.visibility = 'visible';
-          document.getElementById('card2').style.transform = 'translateY(0)';
-          document.getElementById('card2').style.opacity = '1';
-          document.getElementById('card2').style.visibility = 'visible';
-          document.getElementById('card3').style.transform = 'translateY(0)';
-          document.getElementById('card3').style.opacity = '1';
-          document.getElementById('card3').style.visibility = 'visible';
-        }
-      });
-    }
-    if (projects.current) {
-      observer.observe(projects.current);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const options = { root: null, threshold: 0.25, rootMargin: '-50px' };
+  //   const observer = new IntersectionObserver(animateProjects, options);
+  //   function animateProjects(entries, observer) {
+  //     entries.forEach((entry) => {
+  //       let heading = document.getElementById('projects-heading');
+  //       if (entry.isIntersecting) {
+  //         heading.style.opacity = '1';
+  //         heading.style.visibility = 'visible';
+  //         heading.style.transform = 'translateY(0)';
+  //         heading.style.transitionDelay = '0ms';
+  //         document.getElementById('card1').style.transform = 'translateY(0)';
+  //         document.getElementById('card1').style.opacity = '1';
+  //         document.getElementById('card1').style.visibility = 'visible';
+  //         document.getElementById('card2').style.transform = 'translateY(0)';
+  //         document.getElementById('card2').style.opacity = '1';
+  //         document.getElementById('card2').style.visibility = 'visible';
+  //         document.getElementById('card3').style.transform = 'translateY(0)';
+  //         document.getElementById('card3').style.opacity = '1';
+  //         document.getElementById('card3').style.visibility = 'visible';
+  //       }
+  //     });
+  //   }
+  //   if (projects.current) {
+  //     observer.observe(projects.current);
+  //   }
+  // }, []);
   return (
     <div className={styles.project} id='projects'>
       <div className={styles.section}>

@@ -21,10 +21,10 @@
   padding: 1rem;
 }
 .section h2 {
-  opacity: 0;
+  /* opacity: 0;
   visibility: hidden;
   transform: translateY(50px);
-  transition: all 1s ease;
+  transition: all 1s ease; */
   color: var(--green);
   letter-spacing: 2px;
   font-size: clamp(2rem, 3vw, 3rem);
@@ -39,7 +39,7 @@
   height: fit-content;
   margin-top: 1rem;
 }
-.flashkart,
+/* .flashkart,
 .circle,
 .chat {
   opacity: 0;
@@ -57,7 +57,7 @@
 .chat {
   transform: translateY(110px);
   transition-delay: 200ms;
-}
+} */
 .card {
   position: relative;
   display: grid;

@@ -3,33 +3,33 @@ import styles from './Skills.module.css';
 
 const Skills = () => {
   const skills = useRef();
-  useEffect(() => {
-    const options = { root: null, threshold: 0.25, rootMargin: '-150px' };
-    const observer = new IntersectionObserver(animateSkills, options);
-    function animateSkills(entries, observer) {
-      entries.forEach((entry) => {
-        let heading = document.getElementById('skills-heading');
-        if (entry.isIntersecting) {
-          heading.style.opacity = '1';
-          heading.style.visibility = 'visible';
-          heading.style.transform = 'translateY(0)';
-          heading.style.transitionDelay = '0ms';
-          document.getElementById('list2').style.transform = 'translateY(0)';
-          document.getElementById('list2').style.opacity = '1';
-          document.getElementById('list2').style.visibility = 'visible';
-          document.getElementById('list1').style.transform = 'translateY(0)';
-          document.getElementById('list3').style.transform = 'translateY(0)';
-          document.getElementById('list1').style.opacity = '1';
-          document.getElementById('list3').style.opacity = '1';
-          document.getElementById('list1').style.visibility = 'visible';
-          document.getElementById('list3').style.visibility = 'visible';
-        }
-      });
-    }
-    if (skills.current) {
-      observer.observe(skills.current);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const options = { root: null, threshold: 0.25, rootMargin: '-150px' };
+  //   const observer = new IntersectionObserver(animateSkills, options);
+  //   function animateSkills(entries, observer) {
+  //     entries.forEach((entry) => {
+  //       let heading = document.getElementById('skills-heading');
+  //       if (entry.isIntersecting) {
+  //         heading.style.opacity = '1';
+  //         heading.style.visibility = 'visible';
+  //         heading.style.transform = 'translateY(0)';
+  //         heading.style.transitionDelay = '0ms';
+  //         document.getElementById('list2').style.transform = 'translateY(0)';
+  //         document.getElementById('list2').style.opacity = '1';
+  //         document.getElementById('list2').style.visibility = 'visible';
+  //         document.getElementById('list1').style.transform = 'translateY(0)';
+  //         document.getElementById('list3').style.transform = 'translateY(0)';
+  //         document.getElementById('list1').style.opacity = '1';
+  //         document.getElementById('list3').style.opacity = '1';
+  //         document.getElementById('list1').style.visibility = 'visible';
+  //         document.getElementById('list3').style.visibility = 'visible';
+  //       }
+  //     });
+  //   }
+  //   if (skills.current) {
+  //     observer.observe(skills.current);
+  //   }
+  // }, []);
   return (
     <div className={styles.skills} id='skills'>
       <div className={styles.section}>

@@ -21,8 +21,6 @@ const Navbar = () => {
             <li onClick={() => scrollToAnElement('about')}>ABOUT</li>
             <li onClick={() => scrollToAnElement('skills')}>SKILLS</li>
             <li onClick={() => scrollToAnElement('projects')}>PROJECTS</li>
-            <li onClick={() => scrollToAnElement('hello')}>CONTACTS</li>
-            <li onClick={() => scrollToAnElement('hello')}>SAY HELLO</li>
             <a href={resume} download rel='noopener noreferrer' target='_blank' className={styles.resume}>
               RESUME
             </a>
@@ -49,8 +47,6 @@ const Navbar = () => {
             <li onClick={() => scrollToAnElement('about')}>ABOUT</li>
             <li onClick={() => scrollToAnElement('skills')}>SKILLS</li>
             <li onClick={() => scrollToAnElement('projects')}>PROJECTS</li>
-            <li onClick={() => scrollToAnElement('hello')}>CONTACTS</li>
-            <li onClick={() => scrollToAnElement('hello')}>SAY HELLO</li>
             <a href={resume} download rel='noopener noreferrer' target='_blank' className={styles.resume}>
               RESUME
             </a>

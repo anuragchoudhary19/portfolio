@@ -19,7 +19,7 @@
   height: fit-content;
   padding: 1rem;
 }
-.list1,
+/* .list1,
 .list2,
 .list3 {
   opacity: 0;
@@ -37,12 +37,12 @@
 .list3 {
   transform: translateY(110px);
   transition-delay: 200ms;
-}
+} */
 .section h2 {
-  opacity: 0;
+  /* opacity: 0;
   visibility: hidden;
   transform: translateY(50px);
-  transition: all 1s ease;
+  transition: all 1s ease; */
   color: var(--green);
   letter-spacing: 2px;
   font-size: clamp(2rem, 3vw, 3rem);
