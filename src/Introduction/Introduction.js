@@ -1,32 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import styles from './Introduction.module.css';
 
 const Introduction = () => {
+  useEffect(() => {
+    let intro = document.getElementById('intro');
+    intro.childNodes.forEach((child) => {
+      child.style.opacity = '1';
+      child.style.visibility = 'visible';
+      child.style.transform = 'translateY(0)';
+    });
+  }, []);
   return (
     <div className={styles.intro}>
-      <header>
-        <h1>Fullstack Developer using MERN Stack</h1>
-        <h3>Hi there, I am Anurag and this is what I do.</h3>
-      </header>
-      <article>
-        <div>
-          <p>
-            I started my Web Development journey about an year ago and I must admit that I never imagined that I would
-            be able to learn so many things and would be able to build such websites in such a short amount of time.
-          </p>
-          <p>
-            It had been quite an incredible journey till now and I am confident that I would like to continue it even
-            further.
-          </p>
-          <p>Hope you checkout some of the projects that I have build along the way.</p>
-          <p>
-            <span style={{ color: '#ffa500' }}>
-              If you are looking for a Web Developer for your next project, then feel free to contact me.
-            </span>
-          </p>
-        </div>
-        <div className={styles.logo}>{/* <img src={logo} alt='logo' /> */}</div>
-      </article>
+      <div className={styles.section} id='intro'>
+        <h3 style={{ color: 'var(--green)', transitionDelay: '400ms' }}>Hi, my name is</h3>
+        <h2 style={{ color: 'var(--white)', transitionDelay: '500ms' }}>Anurag Choudhary</h2>
+        <h3 style={{ color: 'var(--green)', transitionDelay: '600ms' }}>and</h3>
+        <h2 style={{ color: 'var(--dark-white)', transitionDelay: '700ms' }}>I turn ideas into a reality.</h2>
+        <br />
+        <h3 style={{ color: 'var(--dark-white)', transitionDelay: '800ms' }}>FullStack Developer using MERN Stack.</h3>
+      </div>
+      <div className={styles.links}>
+        <a
+          href='https://github.com/anuragchoudhary19'
+          rel='noopener noreferrer'
+          target='_blank'
+          className={styles.github}>
+          <FontAwesomeIcon icon={faGithub} size='2x' />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/anurag-choudhary-462913164/'
+          rel='noopener noreferrer'
+          target='_blank'
+          className={styles.linkedin}>
+          <FontAwesomeIcon icon={faLinkedinIn} size='2x' />
+        </a>
+        <a href='https://twitter.com/anurag_7011' rel='noopener noreferrer' target='_blank' className={styles.twitter}>
+          <FontAwesomeIcon icon={faTwitter} size='2x' />
+        </a>
+      </div>
     </div>
   );
 };

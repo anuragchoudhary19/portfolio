@@ -2,72 +2,68 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--color);
+  justify-content: center;
   height: 100vh;
   width: 100%;
   background-color: transparent;
 }
 
-.intro > header {
-  position: relative;
-  top: 10vh;
-  width: 90%;
-  height: 30vh;
-  text-align: center;
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  height: 100%;
+  padding: 1rem;
+}
+.section > * {
+  padding: 0.125rem 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+.section h2 {
+  letter-spacing: 2px;
+  font-size: clamp(3rem, 5vw, 7rem);
+  font-family: 'Georama', sans-serif;
+}
+.section h3 {
+  text-align: left;
+  letter-spacing: 2px;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: 'Georama', sans-serif;
+}
+.links {
+  position: fixed;
+  left: 1rem;
+  top: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-}
-.intro > header h1 {
-  font-size: 3rem;
-  color: #ffa500;
-  font-family: 'Georama', sans-serif;
-}
-.intro > header h3 {
-  color: yellow;
-  font-weight: 400;
-  font-family: 'Georama', sans-serif;
-}
-.intro > article {
-  position: relative;
-  top: 10vh;
-  width: 80%;
+  width: fit-content;
   height: fit-content;
-  text-align: center;
+}
+.links > a {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.75rem;
+  color: var(--dark-white);
 }
-.intro > article div:first-child {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-.intro > article p {
-  text-align: left;
-  width: 100%;
-  color: hsl(347, 85%, 50%);
-  font-size: 1.2rem;
-  font-family: 'Georama', sans-serif;
-  font-weight: 400;
-  margin-bottom: 1rem;
+.links > a:hover {
+  background-color: var(--green-light);
 }
 
-.logo {
-  background-image: url('../images/19199262.jpg');
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-size: cover;
-  background-blend-mode: darken;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 300px;
-  opacity: 0.5;
-  border-radius: 50%;
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+  .links {
+    display: none;
+  }
 }

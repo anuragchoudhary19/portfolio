@@ -4,7 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Poppins', sans-serif;
+  background-color: var(--navy);
+  scroll-behavior: smooth;
 }
+body,
+html,
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +19,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 :root {
-  --background-color: hsl(0, 0%, 100%);
-  --color: white;
+  --navy: hsl(210, 76%, 7%);
+  --dark-navy: hsl(210, 76%, 4%);
+  --navy-light: hsla(210, 76%, 7%, 0.851);
+  --footer-background: hsl(210, 90%, 10%);
+  --green: #64ffda;
+  --green-light: hsla(166, 100%, 70%, 0.1);
+  /* --dark-green: hsla(166, 100%, 40%, 1); */
+  --white: #f1f6f9;
+  --dark-white: hsl(0, 0%, 60%);
+  --darker-white: hsl(0, 0%, 60%);
+  --green-blue: #00adb5;
+  --light-black: #393e46;
+  --black: #222831;
+  --bp-xs: 0;
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
 }
