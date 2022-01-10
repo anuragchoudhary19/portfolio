@@ -2,25 +2,25 @@ import React, { useEffect } from 'react';
 import styles from './AboutMe.module.css';
 
 const AboutMe = () => {
-  // useEffect(() => {
-  //   let about = document.getElementById('about');
-  //   const options = { root: null, threshold: 0.25, rootMargin: '-150px' };
-  //   const observer = new IntersectionObserver((entries, observer) => {
-  //     entries.forEach((entry) => {
-  //       let aboutHeading = document.getElementById('about-heading');
-  //       let aboutContent = document.getElementById('about-content');
-  //       if (entry.isIntersecting) {
-  //         aboutHeading.style.opacity = '1';
-  //         aboutHeading.style.transform = 'translateY(0)';
-  //         aboutHeading.style.transitionDelay = '0ms';
-  //         aboutContent.style.opacity = '1';
-  //         aboutContent.style.transform = 'translateY(0)';
-  //         aboutContent.style.transitionDelay = '100ms';
-  //       }
-  //     });
-  //   }, options);
-  //   observer.observe(about);
-  // }, []);
+  useEffect(() => {
+    let about = document.getElementById('about');
+    const options = { root: null, threshold: 0.25, rootMargin: '-150px' };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        let aboutHeading = document.getElementById('about-heading');
+        let aboutContent = document.getElementById('about-content');
+        if (entry.isIntersecting) {
+          aboutHeading.style.opacity = '1';
+          aboutHeading.style.transform = 'translateY(0)';
+          aboutHeading.style.transitionDelay = '0ms';
+          aboutContent.style.opacity = '1';
+          aboutContent.style.transform = 'translateY(0)';
+          aboutContent.style.transitionDelay = '100ms';
+        }
+      });
+    }, options);
+    observer.observe(about);
+  }, []);
   return (
     <div className={styles.about} id='about'>
       <div className={styles.section}>
