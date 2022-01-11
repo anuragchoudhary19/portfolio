@@ -19,31 +19,30 @@
   padding: 1rem;
 }
 
-.section h2 {
+.heading {
   color: var(--green);
   letter-spacing: 2px;
   font-size: clamp(2rem, 3vw, 3rem);
-  font-family: 'Georama', sans-serif;
 }
-/* .section > * {
+.section > * {
   transform: translateY(50px);
   opacity: 0;
   transition: all 1s ease;
-} */
+}
 
-.section > div {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin-top: 1rem;
 }
-.section div p {
+.content p {
+  margin: 0.5rem 0;
   text-align: left;
   color: var(--white);
   font-size: clamp(1rem, 2vw, 1.2rem);
   letter-spacing: 2px;
-  font-family: 'Georama', sans-serif;
 }
 @media (max-width: 768px) {
   .about {

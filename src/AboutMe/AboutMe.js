@@ -24,32 +24,34 @@ const AboutMe = () => {
   return (
     <div className={styles.about} id='about'>
       <div className={styles.section}>
-        <h2 id='about-heading'>About Me</h2>
-        <div id='about-content'>
+        <h2 className={styles.heading} id='about-heading'>
+          About Me
+        </h2>
+        <div className={styles.content} id='about-content'>
           <p>
-            My Web Development journey started about an year ago and I must admit that I never imagined that I would be
-            able to learn so many things and would be able to build such cool web apps in such a short amount of time.
+            I am a <b>Mechanical Engineer</b> by education, but my unfulfilled creative instincts and a few twists of
+            fate brought me into the software development field.
           </p>
-          <br />
           <p>
-            I have worked on projects such as an E-commerce, a Social Media, a Messaging App etc. to count a few and
-            there are few more in the pipeline.
+            My Web Development journey started about one and a half years ago, and I must admit that I had never
+            imagined that I would be able to learn so many things and would be able to build such cool web apps from
+            scratch in such a short amount of time.
           </p>
-          <br />
           <p>
-            I have worked on both Front-End and Back-End to ensure that I get enough idea of what goes in build a whole
-            of a website.
+            I have built projects, such as <b style={{ color: 'var(--green)' }}>E-commerce Website</b>,
+            <b style={{ color: 'var(--green)' }}> Social Media App</b>,
+            <b style={{ color: 'var(--green)' }}> Messaging App</b>, etc., to count a few.
           </p>
-          <br />
           <p>
-            It had been quite an incredible journey till now and I am confident that I would like to continue it even
-            further.
+            I have worked on both Front-End and Back-End to ensure that I get enough idea of what goes into building a
+            whole of a website.
           </p>
-          <br />
           <p>Hope you checkout some of the projects that I have build along the way.</p>
-          <br />
           <p style={{ color: 'var(--green)' }}>
-            <span>If you are looking for a Web Developer for your next project, then feel free to contact me.</span>
+            <span>
+              If you are looking for a Front-End Developer/FullStack Developer for your next project, I would be more
+              than happy to be a part of your project.
+            </span>
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Georama', sans-serif;
   background-color: var(--navy);
   scroll-behavior: smooth;
 }
@@ -19,13 +19,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 :root {
-  --navy: hsl(210, 76%, 7%);
-  --dark-navy: hsl(210, 76%, 4%);
-  --navy-light: hsla(210, 76%, 7%, 0.851);
+  --navy: hsl(210, 76%, 6%);
+  --dark-navy: hsl(210, 76%, 3%);
+  --light-navy: hsla(210, 76%, 6%, 0.851);
   --footer-background: hsl(210, 90%, 10%);
-  --green: #64ffda;
-  --green-light: hsla(166, 100%, 70%, 0.1);
-  /* --dark-green: hsla(166, 100%, 40%, 1); */
+  --green: hsl(166, 100%, 70%);
+  --light-green: hsla(166, 100%, 70%, 0.1);
+  --dark-green: hsla(166, 100%, 40%, 0.5);
   --white: #f1f6f9;
   --dark-white: hsl(0, 0%, 60%);
   --darker-white: hsl(0, 0%, 60%);
