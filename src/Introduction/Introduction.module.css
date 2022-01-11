@@ -9,6 +9,7 @@
 }
 
 .section {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,12 +19,14 @@
   padding: 1rem;
 }
 .section > * {
+  height: fit-content;
   padding: 0.125rem 0;
   visibility: hidden;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease;
 }
+
 .section h2 {
   letter-spacing: 2px;
   font-size: clamp(3rem, 5vw, 7rem);
