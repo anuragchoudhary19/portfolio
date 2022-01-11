@@ -4,7 +4,7 @@ import styles from './AboutMe.module.css';
 const AboutMe = () => {
   useEffect(() => {
     let about = document.getElementById('about');
-    const options = { root: null, threshold: 0.25, rootMargin: '-150px' };
+    const options = { root: null, threshold: 0.25, rootMargin: '-150px 0px -150px 0px' };
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         let aboutHeading = document.getElementById('about-heading');
