@@ -18,7 +18,7 @@ const AboutMe = () => {
             aboutContent.childNodes[j].style.opacity = '1';
             aboutContent.childNodes[j].style.transform = 'translateY(0)';
             aboutContent.childNodes[j].style.transitionDelay = delay + 'ms';
-            delay = delay + 100;
+            delay = delay + 50;
           }
         }
       }

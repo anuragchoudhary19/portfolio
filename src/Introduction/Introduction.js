@@ -6,21 +6,34 @@ import styles from './Introduction.module.css';
 const Introduction = () => {
   useEffect(() => {
     let intro = document.getElementById('intro');
-    intro.childNodes.forEach((child) => {
-      child.style.opacity = '1';
-      child.style.visibility = 'visible';
-      child.style.transform = 'translateY(0)';
-    });
+    const options = { root: null, threshold: 0.25, rootMargin: '-150px 0px -150px 0px' };
+    const observer = new IntersectionObserver(observe, options);
+    function observe(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          let delay = 1000;
+          intro.childNodes.forEach((child) => {
+            fadeIn(child, delay);
+            delay = delay + 900;
+          });
+        }
+      });
+    }
+    function fadeIn(element, delay) {
+      element.style.opacity = '1';
+      element.style.transform = 'translateY(0)';
+      element.style.transitionDelay = delay + 'ms';
+    }
+    observer.observe(intro);
   }, []);
   return (
     <div className={styles.intro}>
       <div className={styles.section} id='intro'>
-        <h3 style={{ color: 'var(--green)', transitionDelay: '400ms' }}>Hi, my name is</h3>
-        <h2 style={{ color: 'var(--white)', transitionDelay: '500ms' }}>Anurag Choudhary</h2>
-        <h3 style={{ color: 'var(--green)', transitionDelay: '600ms' }}>and</h3>
-        <h2 style={{ color: 'var(--dark-white)', transitionDelay: '700ms' }}>I turn ideas into a reality.</h2>
-        <br />
-        <h3 style={{ color: 'var(--dark-white)', transitionDelay: '800ms' }}>FullStack Developer using MERN Stack.</h3>
+        <h3 style={{ color: 'var(--green)' }}>Hi, my name is</h3>
+        <h2 style={{ color: 'var(--white)' }}>Anurag Choudhary</h2>
+        <h3 style={{ color: 'var(--green)' }}>and</h3>
+        <h2 style={{ color: 'var(--dark-white)' }}>I turn ideas into a reality.</h2>
+        <h3 style={{ color: 'var(--dark-white)' }}>FullStack Developer using MERN Stack.</h3>
       </div>
       <div className={styles.links}>
         <a

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import resume from '../resume.pdf';
 const Navbar = () => {
@@ -10,6 +10,16 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }
   };
+  useEffect(() => {
+    const nav = document.getElementById('navH');
+    let delay = 100;
+    nav.childNodes.forEach((child) => {
+      child.style.opacity = '1';
+      child.style.transform = 'translateY(0)';
+      child.style.transitionDelay = delay + 'ms';
+      delay = delay + 100;
+    });
+  }, []);
   return (
     <div ref={navbar} className={styles.navbar}>
       <nav>
