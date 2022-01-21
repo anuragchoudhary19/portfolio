@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import styles from './Navbar.module.css';
 import resume from '../resume.pdf';
 const Navbar = () => {
@@ -11,8 +13,17 @@ const Navbar = () => {
     }
   };
   useEffect(() => {
-    const nav = document.getElementById('navH');
-    let delay = 100;
+    const nav = document.getElementById('nav');
+    const logo = document.getElementById('logo');
+    logo.style.opacity = '1';
+    logo.style.transform = 'translateY(0)';
+    if (document.getElementById('menu')) {
+      const menu = document.getElementById('menu');
+      menu.style.opacity = '1';
+      menu.style.transform = 'translateY(0)';
+      menu.style.transitionDelay = '200ms';
+    }
+    let delay = 200;
     nav.childNodes.forEach((child) => {
       child.style.opacity = '1';
       child.style.transform = 'translateY(0)';
@@ -20,43 +31,56 @@ const Navbar = () => {
       delay = delay + 100;
     });
   }, []);
+
   return (
-    <div ref={navbar} className={styles.navbar}>
+    <div ref={navbar} className={styles.navbar} id='navbar'>
       <nav>
-        <div className={styles.logo} onClick={() => scrollToAnElement('intro')}>
-          A
+        <div id='logo' className={styles.logo} onClick={() => scrollToAnElement('intro')}>
+          <span>A</span>
         </div>
         <div className={styles.navH}>
-          <ul id='navH'>
-            <li onClick={() => scrollToAnElement('about')}>ABOUT</li>
-            <li onClick={() => scrollToAnElement('skills')}>SKILLS</li>
-            <li onClick={() => scrollToAnElement('projects')}>PROJECTS</li>
-            <a href={resume} download rel='noopener noreferrer' target='_blank' className={styles.resume}>
-              RESUME
-            </a>
+          <ul id='nav'>
+            <li onClick={() => scrollToAnElement('about')}>
+              <span>ABOUT</span>
+            </li>
+            <li onClick={() => scrollToAnElement('skills')}>
+              <span>SKILLS</span>
+            </li>
+            <li onClick={() => scrollToAnElement('projects')}>
+              <span>PROJECTS</span>
+            </li>
+            <li onClick={() => scrollToAnElement('contact')}>
+              <span>CONTACT</span>
+            </li>
+            <li>
+              <a href={resume} download rel='noopener noreferrer' target='_blank' className={styles.resume}>
+                RESUME
+              </a>
+            </li>
           </ul>
         </div>
         <div className={styles.navV} onClick={() => setShowDropdown(!showDropdown)}>
-          <div>
-            <svg width='2rem' height='2rem'>
-              <line x1='0' y1='10%' x2='100%' y2='10%' style={{ stroke: 'var(--green)', strokeWidth: '6' }} />
-              <line x1='0' y1='50%' x2='100%' y2='50%' style={{ stroke: 'var(--green)', strokeWidth: '6' }} />
-              <line x1='0' y1='90%' x2='100%' y2='90%' style={{ stroke: 'var(--green)', strokeWidth: '6' }} />
-            </svg>
-          </div>
           <div
             className={styles.backdrop}
-            style={{ transform: showDropdown ? 'translateX(0)' : 'translateX(150vw)' }}></div>
-          <ul style={{ transform: showDropdown ? 'translateX(0)' : 'translateX(150vw)' }}>
+            style={{
+              zIndex: showDropdown ? '101' : '-101',
+              opacity: showDropdown ? '1' : '0',
+            }}></div>
+          <div id='menu' className={styles.menu}>
+            <FontAwesomeIcon icon={faBars} size='2x' color='var(--green)' />
+          </div>
+          <ul
+            style={{
+              transform: showDropdown ? 'translateX(0)' : 'translateX(150vw)',
+              opacity: showDropdown ? '1' : '0',
+            }}>
             <li className={styles.close} onClick={() => setShowDropdown(!showDropdown)}>
-              <svg width='2rem' height='2rem'>
-                <line x1='0' y1='0' x2='100%' y2='100%' style={{ stroke: 'var(--green)', strokeWidth: '6' }} />
-                <line x1='0' y1='100%' x2='100%' y2='0' style={{ stroke: 'var(--green)', strokeWidth: '6' }} />
-              </svg>
+              <FontAwesomeIcon icon={faTimes} size='2x' color='var(--green)' />
             </li>
             <li onClick={() => scrollToAnElement('about')}>ABOUT</li>
             <li onClick={() => scrollToAnElement('skills')}>SKILLS</li>
             <li onClick={() => scrollToAnElement('projects')}>PROJECTS</li>
+            <li onClick={() => scrollToAnElement('contact')}>CONTACT</li>
             <a href={resume} download rel='noopener noreferrer' target='_blank' className={styles.resume}>
               RESUME
             </a>

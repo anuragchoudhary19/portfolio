@@ -56,9 +56,12 @@
   height: fit-content;
   padding: 0.75rem;
   color: var(--dark-white);
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
 }
-.links > a:hover {
-  background-color: var(--green-light);
+.links > a svg:hover {
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {

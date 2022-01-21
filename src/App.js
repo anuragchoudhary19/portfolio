@@ -6,6 +6,7 @@ import Introduction from './Introduction/Introduction';
 import Navbar from './Navbar/Navbar';
 import Projects from './Projects/Projects';
 import Skills from './Skills/Skills';
+import Message from './Message/Message';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <AboutMe />
       <Skills />
       <Projects />
-      {/* <Message /> */}
+      <Message />
       <Footer />
     </div>
   );

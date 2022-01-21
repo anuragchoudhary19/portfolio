@@ -1,6 +1,7 @@
 .navbar {
-  /* position: sticky;
-  top: 0; */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   z-index: 100;
   display: flex;
   flex-direction: row;
@@ -20,18 +21,11 @@
   height: 100%;
   width: 100%;
 }
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.navH {
   position: relative;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  font-size: 3rem;
-  color: var(--green);
-  border: 2px solid var(--green);
-  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  width: fit-content;
 }
 
 .navH ul {
@@ -39,12 +33,13 @@
   justify-content: center;
   align-items: center;
   width: fit-content;
-  list-style: decimal;
+  list-style: none;
   font-size: 1rem;
   font-weight: 700;
   height: 2.5rem;
   color: inherit;
   cursor: pointer;
+  transition: all 1s ease;
 }
 .navV {
   display: none;
@@ -53,27 +48,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  vertical-align: middle;
+  width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 2px;
   border-radius: 2px;
-  color: inherit;
-  background-color: transparent;
+  color: var(--white);
   cursor: pointer;
 }
-.navH ul * {
+.navbar li span:hover {
+  color: var(--green);
+  background-color: var(--light-green);
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  font-size: 3rem;
+  color: var(--green);
+  border: 2px solid var(--green);
+  cursor: pointer;
+}
+.logo span {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--green);
+}
+.navH ul li,
+.logo,
+.menu {
   opacity: 0;
   transform: translateY(-50px);
-  transition: all 1s ease;
-}
-
-.navbar li:hover {
-  color: var(--green);
-  background-color: var(--green-light);
+  transition: opacity 1s ease, transform 1s ease;
 }
 .resume {
   display: flex;
@@ -99,34 +113,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
 }
 .backdrop {
   position: fixed;
-  display: block;
+  display: flex;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: saturate(180%) blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: saturate(180%) blur(8px);
+  transition: all 10ms ease;
 }
 .navV ul {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
+  left: 50%;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
-  width: 70%;
   background-color: var(--navy);
-  z-index: 2;
-  transition: all 0.25s ease;
+  z-index: 200;
+  transition: all 0.3s ease;
 }
 .navV ul li {
   display: flex;

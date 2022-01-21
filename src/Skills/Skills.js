@@ -17,7 +17,6 @@ const Skills = () => {
       observer = new IntersectionObserver(animateSkills, options1);
     }
     function animateSkills(entries, observer) {
-      console.log(observer);
       entries.forEach((entry) => {
         const lists = [list1, list2, list3];
         if (entry.isIntersecting) {

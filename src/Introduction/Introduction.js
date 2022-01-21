@@ -6,15 +6,21 @@ import styles from './Introduction.module.css';
 const Introduction = () => {
   useEffect(() => {
     let intro = document.getElementById('intro');
+    let links = document.getElementById('links');
     const options = { root: null, threshold: 0.25, rootMargin: '-150px 0px -150px 0px' };
     const observer = new IntersectionObserver(observe, options);
     function observe(entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          let delay = 1000;
+          let delay = 700;
           intro.childNodes.forEach((child) => {
             fadeIn(child, delay);
-            delay = delay + 900;
+            delay = delay + 100;
+          });
+          delay = delay + 200;
+          links.childNodes.forEach((child) => {
+            fadeIn(child, delay);
+            delay = delay + 100;
           });
         }
       });
@@ -35,7 +41,7 @@ const Introduction = () => {
         <h2 style={{ color: 'var(--dark-white)' }}>I turn ideas into a reality.</h2>
         <h3 style={{ color: 'var(--dark-white)' }}>FullStack Developer using MERN Stack.</h3>
       </div>
-      <div className={styles.links}>
+      <div className={styles.links} id='links'>
         <a
           href='https://github.com/anuragchoudhary19'
           rel='noopener noreferrer'
