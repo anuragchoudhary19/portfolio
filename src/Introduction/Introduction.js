@@ -56,7 +56,7 @@ const Introduction = () => {
           className={styles.linkedin}>
           <FontAwesomeIcon icon={faLinkedinIn} size='2x' />
         </a>
-        <a href='https://twitter.com/anurag_7011' rel='noopener noreferrer' target='_blank' className={styles.twitter}>
+        <a href='https://twitter.com/Anurag1035' rel='noopener noreferrer' target='_blank' className={styles.twitter}>
           <FontAwesomeIcon icon={faTwitter} size='2x' />
         </a>
       </div>
