@@ -24,7 +24,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faTwitter} size='2x' />
         </a>
       </div>
-      <span className={styles.signature}>Created and Designed by Anurag</span>
+      <span className={styles.signature}>Created and Designed by Anurag Choudhary</span>
     </div>
   );
 };

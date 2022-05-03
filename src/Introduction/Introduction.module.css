@@ -28,14 +28,14 @@
 
 .section h2 {
   letter-spacing: 2px;
-  font-size: clamp(3rem, 5vw, 7rem);
-  font-family: 'Georama', sans-serif;
+  font-size: clamp(3rem, 4vw, 7rem);
+  /* font-family: 'Georama', sans-serif; */
 }
 .section h3 {
   text-align: left;
   letter-spacing: 2px;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-family: 'Georama', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  /* font-family: 'Georama', sans-serif; */
 }
 .links {
   position: fixed;

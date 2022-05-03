@@ -36,7 +36,7 @@ const Navbar = () => {
     <div ref={navbar} className={styles.navbar} id='navbar'>
       <nav>
         <div id='logo' className={styles.logo} onClick={() => scrollToAnElement('intro')}>
-          <span>A</span>
+          A
         </div>
         <div className={styles.navH}>
           <ul id='nav'>

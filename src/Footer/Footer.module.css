@@ -6,7 +6,7 @@
   width: 100%;
   height: fit-content;
   padding: 1rem;
-  background-color: var(--footer-background);
+  background-color: transparent;
 }
 .links {
   display: flex;
@@ -27,11 +27,11 @@
 }
 
 .signature {
-  font-weight: bold;
-  font-size: 0.8rem;
+  font-weight: 500;
+  font-size: 1rem;
   padding: 1rem;
   margin-top: 1rem;
-  color: var(--dark-white);
+  color: var(--white);
 }
 @media (min-width: 768px) {
   .links {
